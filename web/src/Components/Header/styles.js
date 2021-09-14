@@ -6,3 +6,29 @@ export const Container = styled.div`
     background:#000000;
     border-bottom: 6px solid #FFD700;
 `
+
+export const Menu = styled. div`
+    width: 50%;
+    height: 70px;
+    display: flex;
+    align-items: center;
+
+    a{
+        color:#FFF;
+        font-weight: bold;
+        text-decoration: none;
+        margin: 0 10px;
+
+    }
+
+    .barra::after{
+        content: "|";
+        margin: 0 10px;
+        color:#FFF;
+
+    }
+    a:hover{
+        color:#FFD700;
+    }
+
+`

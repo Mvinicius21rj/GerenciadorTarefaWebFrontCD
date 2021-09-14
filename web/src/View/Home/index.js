@@ -1,6 +1,7 @@
 import React from 'react';
 import * as Styled from './styles';
 import Header from '../../Components/Header/';
+import Footer from '../../Components/Footer/';
 
 
 
@@ -8,9 +9,8 @@ import Header from '../../Components/Header/';
 function Home(){
     return(
       <Styled.Container>
-     <h1>ok</h1>
-
-      <Header />
+         <Header />
+         <Footer />
       </Styled.Container>
 
   
