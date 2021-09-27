@@ -3,8 +3,8 @@ import styled from "styled-components";
 export const Container = styled.div`
     width: 150px;
     height: 50px;
-    background:#000000;
-    padding: 5px
+    background: ${props =>props.activation ? '#FFD700' : '#000000' };
+    padding: 5px;
     cursor: pointer;
     border-radius: 5px;
 
