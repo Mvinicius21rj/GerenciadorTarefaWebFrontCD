@@ -3,8 +3,9 @@ import styled from "styled-components";
 export const Container = styled.div`
     width: 100%;
     height: 70px;
-    background:#000000;
+    background:#0A0A2A;
     border-bottom: 6px solid #FFD700;
+    
 `
 
 export const Menu = styled. div`
@@ -30,5 +31,6 @@ export const Menu = styled. div`
     a:hover{
         color:#FFD700;
     }
+    
 
 `

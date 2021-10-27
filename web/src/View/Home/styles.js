@@ -2,6 +2,12 @@ import styled from 'styled-components';
 
 export const Container = styled.div`
         width: 100%;
+        height: 100%;
+        position: absolute;
+        background:#E0E6F8;
+        
+
+
 `
 
 export const ContainerFilter = styled.div`
@@ -15,6 +21,7 @@ export const ContainerFilter = styled.div`
                 background: none;
                 border: none;
         }
+        
 
 `
 

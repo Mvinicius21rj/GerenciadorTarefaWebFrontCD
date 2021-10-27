@@ -9,7 +9,7 @@ export const Container = styled.div`
 
     border-radius: 10px;
 
-       
+    background: #0B2161;   
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -28,6 +28,9 @@ export const TopCard = styled.div`
         width: 70px;
         height: 70px;
     }
+    h3{
+        color:#FFFFFF;
+    }
 
 `
 
@@ -41,7 +44,7 @@ export const BottomCard = styled.div`
     }
 
     span{
-        color:#000000;
+        color:#FFFFFF;
     }
 
 `

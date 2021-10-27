@@ -11,8 +11,8 @@ import Img from '../../images/filter2.png';
 import futebol from '../../images/CARDS/esporte.png';
 import viagem from '../../images/CARDS/viagem.png';
 import cinema from '../../images/CARDS/cinema.png';
-import lanche from '../../images/CARDS/lanche.jpg';
-import prova from '../../images/CARDS/prova.jpg';
+import comida from '../../images/CARDS/refeicao.png';
+import prova from '../../images/CARDS/livro.png';
 import academia from '../../images/CARDS/academia.jpg';
 import compra from '../../images/CARDS/compra.jpg';
 import trabalho from '../../images/CARDS/trabalho.png';
@@ -46,7 +46,7 @@ function Home(){
             <TaskCard img={futebol} title="Futebol"/>
             <TaskCard img={viagem} title="Viagem"/>
             <TaskCard img={academia} title="Academia"/>
-            <TaskCard img={lanche} title="Lanche"/>
+            <TaskCard img={comida} title="Comida"/>
             <TaskCard img={prova} title="Prova"/>
             <TaskCard img={trabalho} title="Trabalho"/>
             <TaskCard img={cinema} title="Cinema"/>
