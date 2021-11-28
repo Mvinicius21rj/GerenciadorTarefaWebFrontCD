@@ -31,4 +31,9 @@ export const ContainerCard = styled.div`
         flex-wrap: wrap;
         justify-content: center;
 
+        a{
+                text-decoration: none;
+                color: #000;
+        }
+
 `

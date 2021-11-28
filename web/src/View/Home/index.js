@@ -3,7 +3,7 @@ import * as Styled from './styles';
 import api from '../../services/api';
 
 
-
+import {Link} from 'react-router-dom'
 
 import Header from '../../Components/Header/';
 import Footer from '../../Components/Footer/';
@@ -70,7 +70,9 @@ function Home(){
           {
           tasks.map(
             t => (
+              <Link to={`/task/${t._id}`}>
             <TaskCard  type={t.type} title={t.title} when={t.when} />
+            </Link>
           ))
           }
           </Styled.ContainerCard>

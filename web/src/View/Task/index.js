@@ -1,8 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import * as Styled from './styles';
 import api from '../../services/api';
+import { format } from 'date-fns';
 
+import { useParams } from 'react-router-dom';
 
+import { Navigate } from 'react-router';
 
 
 import Header from '../../Components/Header/';
@@ -16,37 +19,62 @@ import iconUtils from'../../utils/icons';
 
 function Task(){
 
-  const [type, setType] = useState();
-  const [done, setDone] = useState(false);
-   const [title, setTitle] = useState();
-   const [description, setDescription] = useState();
-   const [date, setDate] = useState();
-   const [hour, setHour] = useState();
-   const [macAdress, setMacadress] = useState('11:11:11:11:11:11');
+    const {id} = useParams();
 
-   async function save(){
+    const [navigate, setNavigate] = useState(false);
 
-     
-          await api.post('/task', {
-              macAdress,
-              type,
-              title,
-              description,
-              when: `${date}T${hour}:00.000`
-          }).then(() => alert("A tarefa foi"))
-     
-         
-      
-         
-     }
+    const [type, setType] = useState();
+    const [done, setDone] = useState(false);
+    const [title, setTitle] = useState();
+    const [description, setDescription] = useState();
+    const [date, setDate] = useState();
+    const [hour, setHour] = useState();
+    const [macAdress, setMacadress] = useState('11:11:11:11:11:11');
+
+    async function save(){
+
+        if(id){
+            await api.put(`/task/${id}`, {
+                macAdress,
+                done,
+                type,
+                title,
+                description,
+                when: `${date}T${hour}:00.000`
+            }).then(() => setNavigate(true))
+        } else {
+            await api.post('/task', {
+                macAdress,
+                type,
+                title,
+                description,
+                when: `${date}T${hour}:00.000`
+            }).then(() => setNavigate(true))
+        }
+           
+       }
+     async function loadTask(){
+        await api.get(`/task/${id}`)
+        .then( response => {
+            setType(response.data.type)
+            setTitle(response.data.title)
+            setDescription(response.data.description)
+            setDate(format(new Date(response.data.when), 'yyyy-MM-dd'))
+            setHour(format(new Date(response.data.when), 'HH:mm'))
+        })
+    }
+
+    useEffect(() => {
+        loadTask();
+    }, [])
 
 
   
 
-
-
     return(
       <Styled.Container>
+         {navigate && <Navigate to="/"></Navigate>}
+
          <Header />
             <Styled.Form>
             <Styled.Icons>
