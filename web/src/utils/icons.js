@@ -1,19 +1,23 @@
-import futebol from '../images/CARDS/futebol.jpg';
+import esporte from '../images/CARDS/esporte.png';
+import refeicao from '../images/CARDS/refeicao.png'
 import viagem from '../images/CARDS/viagem.png';
 import cinema from '../images/CARDS/cinema.png';
-import prova from '../images/CARDS/prova.jpg';
-import academia from '../images/CARDS/academia.jpg';
-import compra from '../images/CARDS/compra.jpg';
+import prova from '../images/CARDS/prova.png';
+import ginastica from '../images/CARDS/ginastica.png';
+import compra from '../images/CARDS/compra.png';
 import trabalho from '../images/CARDS/trabalho.png';
+
+
 
 
 const arrayIcons = [
     null,
-    futebol,
+    refeicao,
+    esporte,
     viagem,
     cinema,
     prova,
-    academia,
+    ginastica,
     compra,
     trabalho
 

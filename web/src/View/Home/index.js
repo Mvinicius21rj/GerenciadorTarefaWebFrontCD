@@ -19,7 +19,7 @@ import cinema from '../../images/CARDS/cinema.png';
 import comida from '../../images/CARDS/refeicao.png';
 import prova from '../../images/CARDS/livro.png';
 import academia from '../../images/CARDS/academia.jpg';
-import compra from '../../images/CARDS/compra.jpg';
+
 import trabalho from '../../images/CARDS/trabalho.png';
 
 
